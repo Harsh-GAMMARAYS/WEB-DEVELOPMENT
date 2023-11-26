@@ -1,0 +1,294 @@
+/* general */
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	/* background color */
+
+	--primary-color:#38a3a5;
+	--secondary-color:#22577a;
+	--bg-light-green:#c7f9cc;
+	--bg-grey:#666;
+	--bg-white:#fff;
+
+	/* Text Style */
+
+	--primart-text:#38a3a5;
+	--secondary-text:#22577a;
+	--text-white:#fff;
+	--text-black:#222;
+	--text-grey:#666;
+	--text-white:#ddd;
+}
+
+body{
+	background-color: var(--bg-white);
+}
+
+a {
+	text-decoration: none;
+}
+
+::-webkit-scrollbar{
+	display: none;
+}
+
+.wrapper{
+	padding: 6.25rem 0;
+
+}
+
+.main-btn{
+	display: inline-block;
+	border: .0625rem solid var(--bg-white);
+	columns: var(--text-white);
+	text-align: center;
+	padding: .75rem 1.375rem;
+	font-size: 1rem;
+	background: transparent;
+	text-transform: capitalize;
+	border-radius: .1875rem;
+	transition: all 0.3s ease-in-out;
+}
+
+.main-btn:hover{
+	background-color: var(--secondary-color);
+	border-color: var(--secondary-color);
+	color: var(--text-white);
+}
+
+.fill-btn{
+	background-color: #3c6e71;
+	border-color: #3c6e71;
+	color: var(--text-white);
+}
+
+.fill-btn:hover{
+	background-color: var(--bg-white);
+	border-color: var(--bg-white);
+	color: var(--text-black);
+}
+
+h1{
+	font-size: 3.875rem;
+	margin-bottom: 1.25rem;
+	font-weight: 600;
+	color: var(--text-white);
+}
+
+h2{
+	font-size: 2.875rem;
+	font-weight: 600;
+	color: var(--secondary-text);
+}
+
+h3{
+	font-size: 2.5rem;
+	font-weight: 600;
+	color: var(--text-white);
+}
+
+h4{
+	font-size: 1.5rem;
+	font-weight: 600;
+	line-height: 2.25rem;
+	color: var(--text-black);
+}
+
+h5{
+	font-size: 1.5rem;
+	line-height: 1.2rem;
+	font-weight: 500;
+	color: var(--primary-text);
+	margin-bottom: .9375rem;
+}
+
+h6{
+	font-size: .875rem;
+	font-weight: 300;
+	color: var(--text-black);
+	margin-bottom: .9375rem;
+	text-transform: uppercase;
+}
+
+p{
+	font-size: 1rem;
+	color: var(--bg-grey);
+	line-height: 1.625rem;
+}
+
+.card{
+	border-radius: .625rem;
+	background-color: var(--bg-white);
+	box-shadow: .5084rem 1.1419rem 2.5rem 0 rgba(0 0 0/8%);
+	padding: 3.75rem 3.125rem 4.6875rem;
+	-webkit-transition: all .4s;
+	border: 0;
+}
+
+@keyframes movebounce{
+	0%{
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+	50%{-webkit-transform: translateY(1.25rem);
+		transform: translateY(1.25rem);
+	}
+	100%{-webkit-transform: translateY(0);
+		transform: translateY();
+	}
+}
+
+
+/* navbar starting */
+
+.navbar-brand{
+	font-weight: 500;
+	color:#6881fa;
+	font-size: 24px;
+	transition: 0.3s color;
+}
+
+.login-button {
+	background-color: var(--primary-color);
+	color: #fff;
+	font-size: 14px;
+	padding: 8px 20px;
+	border-radius: 50px;
+	text-decoration: none;
+	transition: 0.3s background-color;
+}
+
+.login-button:hover {
+	background-color: #00b383;
+
+}
+
+.navbar-toggler {
+	border: none;
+	font-size: 1.25rem;
+}
+
+.navbar-toggler:focus {
+	box-shadow: none;
+	outline: none;
+
+}
+
+.nav-link {
+	color: #666777;
+	font-weight: 500;
+	position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+	color: black;
+}
+
+@media(min-width: 991px) {
+	.nav-link::before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 0;
+		height: 2px;
+		background-color: var(--primary-color);
+		visibility: hidden;
+		transition: 0.3s ease-in-out;
+	}
+
+	.nav-link:hover::before,
+	.nav-link.active::before {
+		width: 100%;
+		visibility: visible;
+	}
+}
+
+/* 3 Banners */
+
+.banner_wrapper {
+	background-color:var(--primary-color);
+	background-position: center center;
+	background-size: cover;
+}
+
+.home .card:hover{
+	-webkit-transform:translateY(-0.625rem);
+	transform: translateY(-0.625rem);
+
+}
+
+.home .icon-box {
+	text-align: center;
+	margin: 0 auto 2.5rem;
+}
+
+
+/* about */
+
+.about_wrapper .card{
+    width: 80%;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.about_wrapper .about-clinic{
+	flex: 0 0 auto;
+	width: 50%;
+}
+
+.about_wrapper .about-clinic:nth-child(1),
+.about_wrapper .about-clinic:nth-child(2){
+	margin-bottom: 2.8125rem;
+}
+
+.about_wrapper .about-clinic:nth-child(2),
+.about_wrapper .about-clinic:nth-child(4){
+	padding-left: 3.75rem;
+}
+
+.about_wrapper .line1, 
+.about_wrapper .line2{
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	width: 1px;
+	height: 100%;
+	background: var(--bg-grey);
+}
+
+.about_wrapper .line2{
+	width: 100%;
+	height: 0.5px;
+}
+
+.services_wrapper {
+	background-color: var(--primary-color);
+}
+
+.services_wrapper h2{
+	color: var(--text-white);
+}
+
+.services_wrapper .card {
+	background-color: var(--bg-white);
+	border: .0625rem solid var(--bg-white);
+	box-shadow: none;
+	padding: 2.5rem;
+}
+
+.services_wrapper .card:hover{
+	cursor: cell;
+	-webkit-transform:translateY(-0.625rem);
+	transform: translateY(-0.625rem);
+}

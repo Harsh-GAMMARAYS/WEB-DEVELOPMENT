@@ -1,0 +1,109 @@
+@media (max-width: 1199.5px){
+
+.card{
+    padding: 2.5rem 1.875rem;
+}
+
+.about_wrapper .card {
+    width: 100%;
+}
+
+.services_wrapper .card{
+    padding: 1.875 1.25rem;
+}
+
+}
+    
+
+@media(max-width:991px) {
+    .wrapper{
+        padding: 3.125rem 0;
+    }
+
+    .main-btn{
+        font-size: .875rem;
+    }
+    
+    h1{
+        font-size: 2.8125;
+        margin-bottom: .625rem;
+    }
+    
+    h2{
+        font-size: 1.875rem;
+    }
+    
+    h3{
+        font-size: 1.5625rem;
+    }
+    h4{
+        font-size: 1.25rem;
+    }
+    
+    h5{
+        font-size: 1.125rem;
+    }
+    
+    p{
+        font-size: .875rem;
+        line-height: 1.35rem;
+    }
+    
+    .card{
+        padding: 1.875rem 1rem;
+    }
+
+    .about_wrapper .about-clinic:nth-child(1),
+.about_wrapper .about-clinic:nth-child(2){
+	margin-bottom: 1.525rem;
+
+}
+
+.about_wrapper .about-clinic:nth-child(2),
+.about_wrapper .about-clinic:nth-child(4){
+	padding-left:2.375rem;
+}
+
+.services_wrapper .card{
+    padding: 1.875 .875rem;
+}
+}
+
+
+@media(max-width:767px) {
+
+    .main-btn{
+        font-size: .875rem;
+    }
+    
+    h1{
+        font-size: 2.5;
+        margin-bottom: 2.5rem;
+    }
+    
+    
+    h5{
+        font-size: 1.25rem;
+    }
+    
+    .services_wrapper .card{
+        text-align: center;
+    }
+}
+
+
+@media(max-width:360px) {
+
+    
+
+.about_wrapper .about-clinic:nth-child(2),
+.about_wrapper .about-clinic:nth-child(4){
+	padding-left:0.625rem;
+
+}
+
+.services_wrapper .icon-box{
+    margin-bottom: 0.0375rem;
+}
+
+}
