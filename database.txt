@@ -1,0 +1,2 @@
+mongodb+srv://admin123:Harshit%402219@gamma.zhc9bkc.mongodb.net/
+postgresql://gammaray.coding:XjBVKHvGDc83@ep-curly-flower-a1zcbzd0.ap-southeast-1.aws.neon.tech/gamma?sslmode=require
