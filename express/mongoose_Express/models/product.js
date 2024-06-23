@@ -1,4 +1,6 @@
 const mongoose = require("mongoose");
+const { Schema } = mongoose;
+
 
 const productSchema = new mongoose.Schema({
   name: {
@@ -15,6 +17,10 @@ const productSchema = new mongoose.Schema({
     lowercase: true,
     enum: ["fruit", "vegetable", "dairy"]
   },
+  farm: {
+    type: Schema.Types.ObjectId,
+    ref: 'Farm'
+  }
 });
 
 const Product = mongoose.model("Product", productSchema);
