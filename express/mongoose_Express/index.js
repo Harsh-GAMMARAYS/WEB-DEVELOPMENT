@@ -7,6 +7,9 @@ const Farm = require("./models/farm");
 const AppError = require("./AppError");
 const methodOverride = require('method-override');
 
+// PRODUCT ROUTES
+const categories = ['fruit', 'vegetable', 'dairy'];
+
 
 mongoose
   .connect("mongodb://localhost:27017/farmStand")
@@ -49,7 +52,7 @@ app.post('/farms', async (req, res) => {
 app.get('/farms/:id/products/new', async (req, res) => {
   const { id } = req.params;
   const farm = await Farm.findById(id);
-  res.render('products/new', { categories, farm })
+  res.render('products/new', { categories, farm });
 });
 
 app.post('/farms/:id/products', async (req, res) => {
@@ -68,10 +71,6 @@ app.delete('/farms/:id', async (req, res) => {
   await Farm.findByIdAndDelete(req.params.id);
   res.redirect('/farms');
 })
-
-
-// PRODUCT ROUTES
-const categories = ['fruit', 'vegetable', 'dairy'];
 
 //function for catching errors
 

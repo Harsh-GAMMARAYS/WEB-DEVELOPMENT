@@ -10,21 +10,24 @@
 <body>
     <h1><%= farm.name %></h1>
     <h2>Add a Product</h2>
-    <form action="/farms/<%=farm._id%>/products" method="POST">
+    <form action="/farms/<%= farm._id %>/products" method="POST">
         <label for="name">Product Name</label>
-        <input type="text" name="name" placeholder="product name" id="name">
+        <input type="text" name="name" placeholder="product name" id="name" required>
+        
         <label for="price">Price (Unit)</label>
-        <input type="number" name="price" placeholder="price" id="price">
+        <input type="number" name="price" placeholder="price" id="price" required>
+        
         <label for="category">Select Category</label>
-        <select name="category" id="category">
+        <select name="category" id="category" required>
             <% for(let category of categories) { %>
                 <option value="<%= category %>"><%= category %></option>
-                <% } %>
+            <% } %>
         </select>
-        <button>Add Product</button>
+        
+        <button type="submit">Add Product</button>
     </form>
+    
     <a href="/farms/<%= farm._id %>">Back to Farm</a>
-
 </body>
 
 </html>
