@@ -1,32 +1,15 @@
-// WAP to swap two numbers
+// WAP to find the maximum number using reduce
 
-const swapFunction = (a ,b) => {
-    [a, b] = [b, a];
-    return [a, b];
-}
+const arr = [2,5,7,9,22,64];
 
-console.log(swapFunction(5,4));
+const maxNum = arr.reduce((acc, current) => {
+  return acc > current ? acc : current;
+}, arr[0]);
 
-// WAP to convert decimal to hexadecimal
+console.log(maxNum);
 
-// WAP to count the number of vowels in the string using functions
-
-const countVowels = str => {
-    const vowels = 'aeiouAEIOU';
-    let count = 0;
-
-    for (let i = 0; i < str.length; i++) {
-        if (vowels.includes(str[i])) {
-            count++;
-        }
-    }
-
-    return count;
-}
-
-let inputString = "Hello, World!";
-let vowelCount = countVowels(inputString);
-console.log("Number of vowels:", vowelCount); 
-
-
+// WAP to find weather the number is palindrome or not -- also for string
+// WAP to take input a string and output should be arranged in alaphabetical order
+// WAP to input an sentence and make first letter of each word in the sentence capital.
+// Take input a string and display all the possible combinations of that string. 
 
