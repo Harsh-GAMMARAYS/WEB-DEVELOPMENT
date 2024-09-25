@@ -3,74 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Factorial Calculator</title>
 </head>
 <body>
-    <table border="1">
-        <tr>
-            <th colspan="3">Seminar</th>
-        </tr>
-        <tr>
-            <th rowspan="2">Day</th>
-            <th>Schedule</th>
-            <th>Topic</th>
-        </tr>
-        <tr>
-            <td></td>
-            <td>
-                <table>
-                    <tr>
-                        <th>Begin</th>
-                        <th>End</th>
-                    </tr>
-                </table>
-            </td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Monday</td>
-            <td>
-                <table>
-                    <tr>
-                        <td>8:00 a.m.</td>
-                        <td>5:00 p.m.</td>
-                    </tr>
-                </table>
-            </td>
-            <td>Introduction to XML<br>Validity: DTD and Relax NG</td>
-        </tr>
-        <tr>
-            <td>Tuesday</td>
-            <td>
-                <table>
-                    <tr>
-                        <td>8:00 a.m.</td>
-                        <td>11:00 a.m.</td>
-                    </tr>
-                    <tr>
-                        <td>11:00 a.m.</td>
-                        <td>2:00 p.m.</td>
-                    </tr>
-                    <tr>
-                        <td>2:00 p.m.</td>
-                        <td>5:00 p.m.</td>
-                    </tr>
-                </table>
-            </td>
-            <td>XPath<br>XSL Transformations</td>
-        </tr>
-        <tr>
-            <td>Wednesday</td>
-            <td>
-                <table>
-                    <tr>
-                        <td>8:00 a.m.</td>
-                        <td>12:00 p.m.</td>
-                    </tr>
-                </table>
-            </td>
-            <td>XSL Formatting Objects</td>
-        </tr>
-    </table>
+    <h1>Factorial Calculation</h1>
+    <!-- This is where the results will be displayed -->
+    <div id="results"></div>
+
+    <script>
+        let output = "";
+
+        const calculateFactorial = () => {
+            for(let i = 0; i <= 10; i++) {
+                output += "<p>" + i + "! = " + factorial(i) + "</p>";
+            }
+            document.getElementById("results").innerHTML = output;
+        }
+
+        const factorial = (number) => {
+            if (number <= 1) {
+                return 1;
+            } else {
+                return number * factorial(number - 1);
+            }
+        }
+
+        window.addEventListener("load", calculateFactorial, false);
+    </script>
 </body>
 </html>
