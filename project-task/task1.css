@@ -57,7 +57,6 @@ body {
     align-items: center;
     height: 100vh;
     padding: 0 50px;
-    background-color: #f3f3f3;
 }
 
 .left-content {
@@ -114,8 +113,8 @@ body {
     width: 600px;
     height: auto;
     border: 5px solid #112ea3;
-    margin-top: 100px;
-    margin-right:70px ;
+    margin-top: 20px;
+    margin-right: 70px;
     margin-bottom: 10px;
 }
 
@@ -134,4 +133,36 @@ body {
 
 .designation {
     font-size: 18px;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.overlay {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-10%);
+    width: 50%;
+    height: 17%;
+    background: #112ea3;
+    color: white;
+}
+
+.domain {
+    position: absolute; 
+    bottom: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    text-align: center; 
+}
+
+.domain p {
+    font-family: Arial, sans-serif; 
+    font-size: 30px; 
+    color: #666666; 
+    letter-spacing: 1px; 
+    margin: 0; 
 }
