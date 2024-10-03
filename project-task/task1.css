@@ -166,3 +166,11 @@ body {
     letter-spacing: 1px; 
     margin: 0; 
 }
+
+.dots-left, .dots-right {
+    width: 30px; /* Adjust width to match the size of the dots */
+    height: 30px; /* Adjust height accordingly */
+    background-image: url('path-to-your-dots-image.png'); /* Replace with the correct path to your dot pattern image */
+    background-size: cover; /* Ensures the image fits the div */
+    margin: 0 10px; /* Adjust margin to space out the dots and text */
+}
